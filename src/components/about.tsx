@@ -1,8 +1,8 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 
-import useScrollPosition from "src/hooks/useScrollPosition";
+import useScrollPosition from "@/hooks/useScrollPosition";
 
 export default function About() {
   const scrollY = useScrollPosition();

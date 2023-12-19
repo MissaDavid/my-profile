@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import CtaButtons from "src/components/ctaButtons";
+import CtaButtons from "@/components/ctaButtons";
 
 export default function Intro() {
   return (

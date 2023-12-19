@@ -1,4 +1,3 @@
-import * as url from "url";
 import {
   TbBrandNextjs,
   TbBrandPython,
@@ -40,7 +39,7 @@ export type Skill = {
   id: string;
   category: string;
   name: string;
-  level: number;
+  level: number;   // 1 > 3
   logo: string;
 };
 export const skills: Skill[] = [

@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-import { links } from "src/data/content";
+import { links } from "@/data/content";
 
 export default function Header() {
   return (

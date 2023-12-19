@@ -2,8 +2,8 @@
 import React from "react";
 
 import toast from "react-hot-toast";
-import SubmitButton from "src/components/submitButton";
-import { sendEmail } from "src/actions/sendEmail";
+import SubmitButton from "@/components/submitButton";
+import { sendEmail } from "@/actions/sendEmail";
 
 const Contact = () => {
   return (

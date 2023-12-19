@@ -1,7 +1,7 @@
-import Intro from "src/components/intro";
-import About from "src/components/about";
-import Skills from "src/components/skills";
-import Contact from "src/components/contact";
+import Intro from "@/components/intro";
+import About from "@/components/about";
+import Skills from "@/components/skills";
+import Contact from "@/components/contact";
 
 export default function Home() {
   return (

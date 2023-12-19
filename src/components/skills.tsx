@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { skills, type Skill } from "src/data/content";
+import { skills, type Skill } from "@/data/content";
 import styles from "./skills.module.css";
 
 // const groupBy = (set: Iterable<any>, fn: (val: any) => string) => {
