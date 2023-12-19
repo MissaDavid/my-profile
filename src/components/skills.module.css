@@ -1,0 +1,66 @@
+.deck {
+    @apply flex flex-wrap gap-1
+}
+
+.input {
+    @apply opacity-0 absolute;
+}
+
+
+.leftNook,
+.rightNook {
+    @apply flex flex-col w-1/6 justify-center;
+}
+
+.cardCentre {
+    @apply flex flex-col w-4/6;
+}
+
+/* CARD BACKGROUND */
+
+.cardLevel1,
+.cardLevel2,
+.cardLevel3 {
+    background-image: url("/images/card-template.png");
+    background-size: cover;
+    width: 140px;
+    height: 200px;
+    @apply flex relative
+}
+
+.cardLevel1 {
+    background-color: #c4c4c4;
+}
+.cardLevel2 {
+    background-color: #426669;
+}
+.cardLevel3 {
+    background-color: #614C61;
+}
+
+
+.logo {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-5xl text-white;
+}
+
+
+/* CATEGORY NAMES */
+.category {
+    @apply text-center text-white text-2xs uppercase leading-none;
+}
+
+
+/* SKILL NAMES */
+.name1, 
+.name2, 
+.name3 {
+    @apply text-center pt-1.5 text-white;
+}
+
+/* SKILL LEVELS */
+.level1,
+.level2,
+.level3 {
+    @apply text-white;
+}
+

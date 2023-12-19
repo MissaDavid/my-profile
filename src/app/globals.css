@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    p {
+        @apply mb-6
+    }
+    
+    .splatter {
+        background-repeat: no-repeat;
+        mask-image: url("/images/paint-splash.png");
+        mask-repeat: repeat;
+        mask-size: 100% 237px;
+        border-radius: 15px;
+        }
+    
+    .cta-focus {
+        @apply focus:scale-110 hover:scale-110 hover:bg-yellow-400 active:scale-105 transition
+    }
+    
+    .form-fields {
+        @apply border border-black rounded px-2
+    }
+}
+
