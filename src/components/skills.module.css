@@ -1,5 +1,9 @@
 .deck {
-    @apply flex flex-wrap gap-1
+    @apply flex flex-wrap gap-1 
+}
+
+.card {
+    @apply hover:scale-125 hover:z-10 transition duration-500 cursor-pointer
 }
 
 .input {
@@ -29,13 +33,13 @@
 }
 
 .cardLevel1 {
-    background-color: #c4c4c4;
-}
-.cardLevel2 {
     background-color: #426669;
 }
-.cardLevel3 {
+.cardLevel2 {
     background-color: #614C61;
+}
+.cardLevel3 {
+    background-color: #475569;
 }
 
 

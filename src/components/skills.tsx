@@ -42,7 +42,6 @@ const skillsByCategoryAndLevel = skills.sort((a, b) =>
           : -1
       : -1,
 );
-console.log(2222, skillsByCategoryAndLevel);
 
 const Skill = ({ category, logo, name, level }: Omit<Skill, "id">) => {
   return (
@@ -67,23 +66,25 @@ const Skill = ({ category, logo, name, level }: Omit<Skill, "id">) => {
 };
 const Skills = () => {
   return (
-    <section id="skills" className="scroll-mt-20 mx-6 my-6 text-justify">
+    <section id="skills" className="scroll-mt-20 mx-40">
       <h2 className="text-3xl font-serif font-medium capitalize mb-8 text-center">
         Skills
       </h2>
-      <div>
+      <div className="text-justify">
         <p>
           I&apos;m a <b>Python Backend developer</b> who is also comfortable
           working on the frontend from time to time. <br />
           I&apos;m not afraid of working with different programming languages or
-          frameworks ; if I can get the opportunity to work on a Rust project
-          for example, I will happily take it! <br />I have worked on enterprise
-          quality web apps, developed numerous REST APIs, worked with ORMs, and
+          frameworks ; if I were to get the opportunity to work on a Rust project, 
+          I would happily take on the challenge. <br />
+          I have worked on enterprise quality web apps, developed numerous REST APIs, worked with ORMs, and
           mentored people of all levels. <br />
         </p>
         <div className={styles.deck}>
           {skillsByCategoryAndLevel.map(({ id, ...rest }) => (
-            <Skill key={id} {...rest} />
+            <div key={id} className={styles.card}>
+              <Skill key={id} {...rest} />
+            </div>
           ))}
         </div>
       </div>

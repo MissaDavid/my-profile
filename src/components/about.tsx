@@ -8,7 +8,7 @@ export default function About() {
   const scrollY = useScrollPosition();
 
   return (
-    <div id="about" className="scroll-mt-20 mx-6 text-justify">
+    <div id="about" className="scroll-mt-20 mx-40 text-justify">
       <motion.section
         animate={scrollY > 0 ? "shown" : "hidden"}
         variants={{
