@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import {SpeedInsights} from "@vercel/speed-insights/next"
 import { Inter, Merriweather } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/header";
+import Navigation from "@/components/navigation";
 import { Toaster } from "react-hot-toast";
 import Footer from "@/components/footer";
 
@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${merriweather.variable} `}>
       <body className={`bg-blue-50 text-gray-950`}>
-        <Header />
+        <Navigation />
         {children}
         <Footer />
         <Toaster position={"top-center"} reverseOrder={false} />
