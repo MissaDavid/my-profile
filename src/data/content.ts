@@ -12,9 +12,12 @@ import {
   TbBrandGit,
   TbBrandAws,
   TbBrandGraphql,
+  TbHome,
+  TbHomeHeart
 } from "react-icons/tb";
 import { BiLogoFlask, BiBoltCircle, BiLogoPostgresql } from "react-icons/bi";
 import { SiAmazondynamodb } from "react-icons/si";
+import {GiSouthKorea} from "react-icons/gi";
 
 export const links = [
   {
@@ -161,5 +164,26 @@ export const skills: Skill[] = [
     name: "AWS",
     level: 1,
     logo: TbBrandAws(),
+  },
+  {
+    id: "french",
+    category: "languages",
+    name: "French",
+    level: 1,
+    logo: TbHome(),
+  }, 
+  {
+    id: "english",
+    category: "languages",
+    name: "English",
+    level: 1,
+    logo: TbHomeHeart(),
+  }, 
+  {
+    id: "korean",
+    category: "languages",
+    name: "Korean",
+    level: 2,
+    logo: GiSouthKorea(),
   },
 ];

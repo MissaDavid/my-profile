@@ -1,0 +1,11 @@
+.contactSection {
+    @apply my-36
+}   
+
+.title {
+    @apply text-3xl font-serif font-medium capitalize text-center pb-4
+}
+
+.formFields {
+    @apply border border-black rounded px-2
+}

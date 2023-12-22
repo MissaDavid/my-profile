@@ -1,0 +1,33 @@
+
+.ctaButtons {
+    @apply flex flex-row gap-x-2 text-sm left-0 right-0 bottom-0;
+    
+    @media screen(md) {
+        @apply absolute text-lg
+    }
+}
+
+
+.cta-focus {
+    @apply focus:scale-110 hover:scale-110 hover:bg-yellow-400 hover:text-gray-900 active:scale-105 transition
+}
+
+.button {
+    @apply flex items-center font-sans shadow-md rounded-lg cta-focus
+}
+
+.contact {
+    @apply button bg-blue-950 text-white px-6 py-2 gap-2
+}
+
+.download {
+    @apply button bg-white text-gray-900 px-2
+}
+
+.linkedin {
+    @apply button bg-white p-2 text-gray-800 text-[1.5rem]
+}
+
+.github {
+    @apply button bg-white p-2 text-gray-800 text-[1.5rem]
+}

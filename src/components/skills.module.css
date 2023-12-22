@@ -1,5 +1,17 @@
+.skillSection {
+    @apply scroll-mt-20 max-w-[1080px] mx-20;
+    
+    p {
+        @apply text-justify
+    }
+}
+
+.title {
+    @apply text-3xl font-serif font-medium capitalize mb-8 text-center
+}
+
 .deck {
-    @apply flex flex-wrap gap-1 
+    @apply flex flex-wrap gap-1 justify-center
 }
 
 .card {

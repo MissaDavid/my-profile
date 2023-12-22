@@ -1,23 +1,24 @@
-"use client";
 import React from "react";
-import { motion } from "framer-motion";
+import styles from "./about.module.css"
+// import { motion } from "framer-motion";
 
-import useScrollPosition from "@/hooks/useScrollPosition";
+// import useScrollPosition from "@/hooks/useScrollPosition";
 
 export default function About() {
-  const scrollY = useScrollPosition();
+  // const scrollY = useScrollPosition();
 
+  
   return (
-    <div id="about" className="scroll-mt-20 mx-40 text-justify">
-      <motion.section
-        animate={scrollY > 0 ? "shown" : "hidden"}
-        variants={{
-          shown: { opacity: 1, y: 0 },
-          hidden: { opacity: 0, y: "20%" },
-        }}
-        initial="hidden"
-        transition={{ duration: 1 }}
-      >
+    <div id="about" className={styles.about}>
+      {/*<motion.section*/}
+      {/*  animate={scrollY > 0 ? "complete" : "initial"}*/}
+      {/*  variants={{*/}
+      {/*    complete: { opacity: 1, y: 0 },*/}
+      {/*    initial: { opacity: 0, y: "20%" },*/}
+      {/*  }}*/}
+      {/*  initial="initial"*/}
+      {/*  transition={{ duration: 1 }}*/}
+      {/*>*/}
         <h2 className="text-3xl font-serif font-medium capitalize mb-8 text-center">
           About me
         </h2>
@@ -63,7 +64,7 @@ export default function About() {
           playing the violin, teaching myself Unreal Engine... And entertaining
           my two cats, Buddy and Pib.
         </p>
-      </motion.section>
+      {/*</motion.section>*/}
     </div>
   );
 }

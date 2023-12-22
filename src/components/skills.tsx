@@ -66,11 +66,11 @@ const Skill = ({ category, logo, name, level }: Omit<Skill, "id">) => {
 };
 const Skills = () => {
   return (
-    <section id="skills" className="scroll-mt-20 mx-40">
-      <h2 className="text-3xl font-serif font-medium capitalize mb-8 text-center">
+    <section id="skills" className={styles.skillSection}>
+      <h2 className={styles.title}>
         Skills
       </h2>
-      <div className="text-justify">
+      <div>
         <p>
           I&apos;m a <b>Python Backend developer</b> who is also comfortable
           working on the frontend from time to time. <br />

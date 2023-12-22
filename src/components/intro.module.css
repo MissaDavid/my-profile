@@ -1,0 +1,44 @@
+.homeSection {
+    @apply flex justify-center md:gap-x-6 pt-28
+}
+
+.yellowDecoration {
+    @apply block absolute h-40 self-center w-full bg-yellow-400 bg-opacity-70;
+}
+
+.headerContainer {
+    @apply flex md:gap-10 relative;
+
+    @media screen(md) {
+        @apply static;
+    }
+}
+
+.headerLeft {
+    @apply flex flex-col justify-center gap-y-8;
+
+    @media screen(md) {
+        @apply gap-y-2 relative;
+    }
+}
+
+.title {
+    @apply flex font-serif text-6xl text-blue-950;
+}
+
+.subtitle {
+    @apply text-xl font-sans;
+}
+
+.image {
+    @apply hidden;
+
+    @media screen(md) {
+        @apply flex object-cover shadow-xl;
+        background-repeat: no-repeat;
+        mask-image: url("/images/paint-splash.png");
+        mask-repeat: repeat;
+        mask-size: 100% 237px;
+        border-radius: 15px;
+    }
+}

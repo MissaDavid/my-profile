@@ -4,17 +4,17 @@ import React from "react";
 import toast from "react-hot-toast";
 import SubmitButton from "@/components/submitButton";
 import { sendEmail } from "@/actions/sendEmail";
+import styles from "./contact.module.css";
 
 const Contact = () => {
   return (
-    <section id="contact" className="my-36">
-      <h2 className="text-3xl font-serif font-medium capitalize mb-8 text-center">
+    <section id="contact" className={styles.contactSection}>
+      <h2 className={styles.title}>
         Contact Me
       </h2>
       <p>
-        You can contact me directly at{" "}
-        <code>workwithmelissa@tamplin.family</code> , or feel free to use the
-        form below :)
+        You can contact me directly at <b><a href="mailto:contact@meibee.dev">contact@meibee.dev</a></b>,
+        or feel free to use the form below :)
       </p>
 
       <form
@@ -34,7 +34,7 @@ const Contact = () => {
           name="senderEmail"
           placeholder="your email"
           required={true}
-          className="form-fields"
+          className={styles.formFields}
         />
         <input
           type="text"
@@ -43,7 +43,7 @@ const Contact = () => {
           maxLength={100}
           placeholder="your name"
           required={true}
-          className="form-fields"
+          className={styles.formFields}
         />
         <textarea
           name="message"
@@ -51,7 +51,7 @@ const Contact = () => {
           rows={5}
           cols={30}
           required={true}
-          className="form-fields"
+          className={styles.formFields}
         />
         <SubmitButton />
       </form>
