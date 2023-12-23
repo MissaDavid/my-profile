@@ -23,40 +23,30 @@ export default function About() {
           About me
         </h2>
         <p>
-          I was born and raised in France, but my curiosity led me to explore
-          the world beyond my homeland, starting with the bustling streets of
-          Seoul. I became a translator and interpret in Korean language,
-          specialising in cinema and traditional music.
+          I was born and raised in France, but my curiosity pushed me to discover
+          the world beyond my homeland. My journey began in the bustling streets of
+          Seoul, where I became a translator specialising in Korean literature,
+          with a focus on cinema and traditional music.
         </p>
         <p>
-          But after a few years I was ready to expand my skills. In my eyes, the
-          line between a spoken language and a programing one is very thin!
-        </p>
-        <p>
-          So I learned how to code and I left for the caffeinated kingdom of
-          Melbourne, Australia, where I got my first full-stack developer job
-          back in 2019. It was an amazing experience that only solidified my
-          desire to stay and grow in the IT industry. I really love being given
-          problems and translate them into solutions that have a positive impact
-          on users.
+          After a few years filled with publications and movie festivals, I was ready to expand my skills. 
+          I had always wanted to learn how to code, and the line between spoken languages and programing ones seemed very thin!
+          So shortly after finishing a 6 months intensive coding bootcamp, I left for the caffeinated kingdom of Melbourne, Australia.
+          Many months later, I got my first full-stack developer job. And it was A-MA-ZING. Being given
+          problems and being able to translate them into solutions that have a positive impact
+          on users was very fulfilling, and that experience only solidified my desire to stay and grow in the IT industry.
         </p>
         <p>
           I &quot;crossed the ditch&quot; not long after to live in Wellington
-          Te Whanganui-a-Tara, Aotearoa New Zealand, and worked as a backend
-          software engineer for a couple digital agencies. Focusing on the
-          backend was a deliberate choice that I do not regret. There is more
-          fun in understanding what happens under the hood.
+          <i>Te Whanganui-a-Tara</i>, Aotearoa New Zealand, where I worked as a Python Backend
+          Software Engineer in a couple different digital agencies. Focusing on the
+          backend was a deliberate choice that I do not regret. To me, there is more
+          fun in understanding what happens <i>underneath the hood</i> and bringing every piece of the puzzle together.
         </p>
 
         <p>
-          I finally ended my peregrinations in Ottawa, and was granted permanent
-          residency in 2023, so I can now call Canada home!
-        </p>
-        <p>
-          All these experiences have helped me grow, have enriched my worldview
-          and fueled me with the desire to give a voice to diverse group of
-          people through my work. And if I can help save the planet in the
-          process, that&apos;s an added bonus.
+          Finally, I ended my peregrinations in Ottawa, and broadened my horizons by working in cybersecurity. 
+          I also celebrated the grant of my Permanent Residency in 2023: I can now call Canada home!
         </p>
 
         <p>
