@@ -19,7 +19,7 @@ export default function About() {
       {/*  initial="initial"*/}
       {/*  transition={{ duration: 1 }}*/}
       {/*>*/}
-        <h2 className="text-3xl font-serif font-medium capitalize mb-8 text-center">
+        <h2 className="text-3xl font-serif font-medium capitalize mb-8">
           About me
         </h2>
         <p>

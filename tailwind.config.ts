@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--inter)"],
-        serif: ["var(--merriweather)"],
+        sans: ["var(--space-grotesk)"],
+        serif: ["var(--syne)"],
       },
       fontSize: {
         "2xs": "0.625rem",

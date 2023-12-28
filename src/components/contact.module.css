@@ -3,7 +3,7 @@
 }   
 
 .title {
-    @apply text-3xl font-serif font-medium capitalize text-center pb-4
+    @apply text-3xl font-serif font-medium capitalize pb-4
 }
 
 .formFields {
