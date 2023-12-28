@@ -77,8 +77,10 @@ const Skills = () => {
           I&apos;m not afraid of working with different programming languages or
           frameworks (if I were to get the opportunity to work with Rust, 
           I would happily take on the challenge!). <br />
-          In the past 5 years, I have worked on enterprise quality web applications, developed numerous REST APIs, 
-          worked with various ORMs as well as raw SQL, and mentored people of all levels. <br />
+          Over the last 5 years, I have contributed to a diverse range of web applications, from startup
+          ventures to enterprise-level projects. During this period, I have developed numerous REST APIs and 
+          worked with various ORMs, as well as raw SQL. I also had the rewarding experience of mentoring
+          people across all skill levels. <br />
           In an ideal scenario, I would love to work on meaningful projects that would give me the opportunity to help people. <br/>
         </p>
         <div className={styles.deck}>

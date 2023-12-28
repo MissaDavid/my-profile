@@ -15,7 +15,7 @@
 }
 
 .card {
-    @apply hover:scale-125 hover:z-10 transition duration-500 cursor-pointer
+    @apply hover:scale-125 hover:z-10 transition duration-300 cursor-pointer
 }
 
 .input {
