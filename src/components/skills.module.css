@@ -1,5 +1,5 @@
 .skillSection {
-    @apply scroll-mt-20 max-w-[1080px] mx-20;
+    @apply scroll-mt-20 max-w-[1080px];
     
     p {
         @apply text-justify

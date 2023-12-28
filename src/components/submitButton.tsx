@@ -8,7 +8,7 @@ const SubmitButton = () => {
     <button
       type="submit"
       disabled={pending}
-      className="group flex items-center bg-blue-950 text-white font-sans px-6 py-2 gap-2 shadow-md rounded-lg"
+      className="group flex items-center bg-blue-950 text-white font-sans px-6 py-2 gap-2 shadow-md rounded-lg w-fit"
     >
       {pending ? (
         <div className="animate-spin h-5 w-5 mr-3 rounded-full border-b-2 border-white"></div>

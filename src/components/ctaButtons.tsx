@@ -22,7 +22,7 @@ function CtaButtons() {
         className={styles.download}
       >
         <HiDownload />
-        Download CV
+        View CV
       </a>
       <a
         href="https://www.linkedin.com/in/mel-david/"
