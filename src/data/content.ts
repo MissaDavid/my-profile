@@ -14,7 +14,9 @@ import {
   TbBrandAws,
   TbBrandGraphql,
   TbHome,
-  TbHomeHeart
+  TbHomeHeart,
+  TbBrandDocker,
+  TbCloud
 } from "react-icons/tb";
 import { BiLogoFlask, BiBoltCircle, BiLogoPostgresql } from "react-icons/bi";
 import { SiAmazondynamodb } from "react-icons/si";
@@ -193,5 +195,19 @@ export const skills: Skill[] = [
     name: "Korean",
     level: 2,
     logo: GiSouthKorea(),
+  },
+  {
+    id: "docker",
+    category: "tools",
+    name: "Docker",
+    level: 1,
+    logo: TbBrandDocker(),
+  },
+  {
+    id: "gcp",
+    category: "tools",
+    name: "GCP",
+    level: 2,
+    logo: TbCloud(),
   },
 ];
