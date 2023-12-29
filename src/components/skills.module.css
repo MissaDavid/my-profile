@@ -1,6 +1,6 @@
 .skillSection {
     @apply scroll-mt-20 max-w-[1080px];
-    
+
     p {
         @apply text-justify
     }
@@ -10,18 +10,36 @@
     @apply text-3xl font-serif font-medium capitalize mb-8
 }
 
+
 .deck {
-    @apply flex flex-wrap gap-1 justify-center
+    @apply hidden;
+    
+    @media screen(md) {
+        @apply flex flex-wrap gap-4 justify-evenly;
+    }
+}
+
+.cardColumn {
+    @apply relative;
 }
 
 .card {
-    @apply hover:scale-125 hover:z-10 transition duration-300 cursor-pointer
+    @apply transition duration-300 cursor-pointer;
+}
+
+.hoveredCard {
+    @apply absolute scale-110 z-50 pointer-events-none -translate-y-16 shadow-2xl;
+}
+
+.card + .card, 
+.card + .hoveredCard,
+.hoveredCard + .card {
+    @apply -mt-32;
 }
 
 .input {
     @apply opacity-0 absolute;
 }
-
 
 .leftNook,
 .rightNook {
@@ -32,28 +50,35 @@
     @apply flex flex-col w-4/6;
 }
 
-/* CARD BACKGROUND */
+/*CATEGORIES && BG COLOURS*/
 
-.cardLevel1,
-.cardLevel2,
-.cardLevel3 {
+.base {
+    @apply flex relative;
     background-image: url("/images/card-template.png");
     background-size: cover;
     width: 140px;
     height: 200px;
-    @apply flex relative
 }
 
-.cardLevel1 {
-    background-color: #426669;
-}
-.cardLevel2 {
-    background-color: #614C61;
-}
-.cardLevel3 {
-    background-color: #475569;
-}
+.languagesSkill {
+    @apply base bg-[#614C61]
 
+}
+.frameworksSkill {
+    @apply base bg-blue-900
+}
+.librariesSkill {
+    @apply base bg-[#426669]
+}
+.speechSkill {
+    @apply base bg-[#475569]
+}
+.databasesSkill {
+    @apply base bg-[#A44769]
+}
+.toolsSkill {
+    @apply base bg-[#22578C]
+}
 
 .logo {
     @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-5xl text-white;
@@ -67,16 +92,6 @@
 
 
 /* SKILL NAMES */
-.name1, 
-.name2, 
-.name3 {
+.name {
     @apply text-center pt-1.5 text-white;
 }
-
-/* SKILL LEVELS */
-.level1,
-.level2,
-.level3 {
-    @apply text-white;
-}
-
