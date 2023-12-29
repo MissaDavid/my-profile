@@ -26,7 +26,7 @@ export default function Intro() {
           <CtaButtons/>
         </div>
         <Image
-          src="/images/mel-cutout-bg.png"
+          src="/images/mel-cutout-white.png"
           alt="profile photo"
           width={300}
           height={220}

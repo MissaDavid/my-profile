@@ -72,7 +72,7 @@ const Skills = () => {
       </h2>
       <div>
         <p>
-          I&apos;m a <b>Python Backend developer</b> who is also comfortable
+          I&apos;m a <span className="font-bold">Python Backend developer</span> who is also comfortable
           working on the frontend from time to time. <br />
           I&apos;m not afraid of working with different programming languages or
           frameworks (if I were to get the opportunity to work with Rust, 

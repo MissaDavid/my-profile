@@ -25,7 +25,7 @@ type ResendSuccess<T> = T | null;
 export const sendEmail = async (formData: FormData) => {
   const senderEmail = formData.get("senderEmail");
   const senderName = formData.get("senderName");
-  const message = formData.get("message");
+  const message = formData.get("senderMessage");
 
   // validation
   if (!validateFormField(senderEmail, 320, true)) {

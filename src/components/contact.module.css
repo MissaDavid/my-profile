@@ -9,3 +9,7 @@
 .formFields {
     @apply border border-black rounded px-2
 }
+
+.labels {
+    @apply text-blue-950
+}

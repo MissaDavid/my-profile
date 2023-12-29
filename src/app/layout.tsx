@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${space_grotesk.variable} ${syne.variable} `}>
-      <body className={`bg-blue-50 text-gray-950`}>
+      <body className={`text-gray-950`}>
         <Navigation />
         {children}
         <Footer />

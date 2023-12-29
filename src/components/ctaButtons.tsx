@@ -28,6 +28,7 @@ function CtaButtons() {
         href="https://www.linkedin.com/in/mel-david/"
         target="_blank"
         className={styles.linkedin}
+        aria-label="LinkedIn"
       >
         <BsLinkedin />
       </a>
@@ -35,6 +36,7 @@ function CtaButtons() {
         href="https://github.com/MissaDavid"
         target="_blank"
         className={styles.github}
+        aria-label="Github"
       >
         {" "}
         <BsGithub />{" "}

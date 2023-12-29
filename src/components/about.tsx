@@ -38,10 +38,10 @@ export default function About() {
         </p>
         <p>
           I &quot;crossed the ditch&quot; not long after to live in Wellington
-          <i>Te Whanganui-a-Tara</i>, Aotearoa New Zealand, where I worked as a Python Backend
+          Te Whanganui-a-Tara, Aotearoa New Zealand, where I worked as a Python Backend
           Software Engineer in a couple different digital agencies. Focusing on the
           backend was a deliberate choice that I do not regret. To me, there is more
-          fun in understanding what happens <i>underneath the hood</i> and bringing every piece of the puzzle together.
+          fun in understanding what happens <span className="italic">underneath the hood</span> and bringing every piece of the puzzle together.
         </p>
 
         <p>

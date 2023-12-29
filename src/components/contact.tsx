@@ -13,7 +13,7 @@ const Contact = () => {
         Contact Me
       </h2>
       <p>
-        You can contact me directly at <b><a href="mailto:contact@meibee.dev">contact@meibee.dev</a></b>,
+        You can contact me directly at <a className="font-bold" href="mailto:contact@meibee.dev">contact@meibee.dev</a>,
         or feel free to use the form below :)
       </p>
 
@@ -29,31 +29,37 @@ const Contact = () => {
           }
         }}
       >
+        <label htmlFor="email" className={styles.labels}>your email</label>
         <input
           type="email"
+          id="email"
           name="senderEmail"
-          placeholder="your email"
           required={true}
+          autoComplete="email"
           className={styles.formFields}
         />
+        <label htmlFor="name" className={styles.labels}>your name</label>
         <input
           type="text"
+          id="name"
           name="senderName"
           minLength={1}
           maxLength={100}
-          placeholder="your name"
           required={true}
+          autoComplete="name"
           className={styles.formFields}
         />
+        <label htmlFor="message" className={styles.labels}>your message</label>
         <textarea
-          name="message"
-          placeholder="your message"
+          name="senderMessage"
+          id="message"
           rows={5}
           cols={30}
           required={true}
+          autoComplete="off"
           className={styles.formFields}
         />
-        <SubmitButton />
+        <SubmitButton/>
       </form>
     </section>
   );
