@@ -1,5 +1,7 @@
 .contactSection {
-    @apply my-36
+    @media screen(md) {
+        @apply my-36
+    }
 }   
 
 .title {
