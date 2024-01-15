@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import {SpeedInsights} from "@vercel/speed-insights/next"
+import {Analytics} from '@vercel/analytics/react';
 import { Space_Grotesk, Syne } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/navigation";
@@ -27,6 +28,7 @@ export default function RootLayout({
         <Footer />
         <Toaster position={"top-center"} reverseOrder={false} />
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
