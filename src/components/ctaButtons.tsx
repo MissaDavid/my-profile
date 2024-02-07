@@ -17,7 +17,7 @@ function CtaButtons() {
         Contact Me
       </Link>
       <a
-        href="/resume-mt.pdf"
+        href="/melissa-tamplin-resume-2024.pdf"
         target="_blank"
         className={styles.download}
       >
