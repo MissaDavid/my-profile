@@ -16,10 +16,11 @@ import {
   TbHome,
   TbHomeHeart,
   TbBrandDocker,
-  TbCloud
+  TbCloud, 
+  TbBrandCSharp
 } from "react-icons/tb";
 import { BiLogoFlask, BiBoltCircle, BiLogoPostgresql } from "react-icons/bi";
-import { SiAmazondynamodb } from "react-icons/si";
+import { SiAmazondynamodb, SiDotnet } from "react-icons/si";
 import {GiSouthKorea} from "react-icons/gi";
 
 export const links = [
@@ -209,5 +210,19 @@ export const skills: Skill[] = [
     name: "GCP",
     level: 2,
     logo: TbCloud(),
+  },
+  {
+    id: "c#",
+    category: "languages",
+    name: "C#",
+    level: 2,
+    logo: TbBrandCSharp(),
+  },
+  {
+    id: "dotnet",
+    category: "frameworks",
+    name: ".NET",
+    level: 3,
+    logo: SiDotnet(),
   },
 ];
