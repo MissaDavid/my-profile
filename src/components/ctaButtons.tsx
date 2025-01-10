@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { BsArrowRight, BsGithub, BsLinkedin } from "react-icons/bs";
-import { HiDownload } from "react-icons/hi";
+import {BsArrowRight, BsGithub, BsLinkedin} from "react-icons/bs";
+import {HiDownload} from "react-icons/hi";
 import React from "react";
 
 import styles from "./ctaButtons.module.css"
@@ -17,7 +17,7 @@ function CtaButtons() {
         Contact Me
       </Link>
       <a
-        href="/melissa-tamplin-resume-2024.pdf"
+        href="/melissa-tamplin-resume-2025.pdf"
         target="_blank"
         className={styles.download}
       >
