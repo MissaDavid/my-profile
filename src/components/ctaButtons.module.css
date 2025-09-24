@@ -1,33 +1,70 @@
 
 .ctaButtons {
-    @apply flex flex-row gap-x-2 text-sm left-0 right-0 bottom-0;
-    
+    @apply flex flex-row gap-x-4 text-sm justify-center;
+
     @media screen(md) {
-        @apply absolute text-lg
+        @apply text-base;
     }
 }
 
-
-.cta-focus {
-    @apply focus:scale-105 hover:scale-105 hover:bg-yellow-400 hover:text-gray-900 active:scale-105 transition
+.button {
+    @apply flex items-center font-sans transition-all duration-300 relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 12px;
 }
 
-.button {
-    @apply flex items-center font-sans shadow-md rounded-lg cta-focus
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .contact {
-    @apply button bg-blue-950 text-white px-6 py-2 gap-2
+    @apply button px-8 py-3 gap-2;
+    background: var(--workshop-green);
+    color: var(--warm-white);
+    border: none;
+    text-decoration: none;
+}
+
+.contact:hover {
+    background: var(--olive-dark);
 }
 
 .download {
-    @apply button bg-white text-gray-900 px-2
+    @apply button px-8 py-3 gap-2;
+    background: transparent;
+    color: var(--workshop-green);
+    border: 1px solid var(--workshop-green);
+    text-decoration: none;
+}
+
+.download:hover {
+    background: var(--workshop-green);
+    color: var(--warm-white);
 }
 
 .linkedin {
-    @apply button bg-white p-2 text-gray-800 text-[1.5rem]
+    @apply button p-3;
+    background: var(--rust-red);
+    color: var(--warm-white);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.linkedin:hover {
+    background: var(--signal-orange);
 }
 
 .github {
-    @apply button bg-white p-2 text-gray-800 text-[1.5rem]
+    @apply button p-3;
+    background: var(--rust-red);
+    color: var(--warm-white);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.github:hover {
+    background: var(--signal-orange);
 }

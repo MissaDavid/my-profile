@@ -1,44 +1,194 @@
 .homeSection {
-    @apply flex justify-center md:gap-x-6 pt-28
+    @apply flex justify-center pt-28 relative min-h-screen;
+    background: linear-gradient(135deg, var(--warm-white) 0%, var(--dust) 100%);
 }
 
-.yellowDecoration {
-    @apply block absolute h-40 self-center w-full bg-yellow-400 bg-opacity-70;
+/* Background geometric elements */
+.geometricBackground {
+    @apply absolute inset-0 overflow-hidden pointer-events-none;
+}
+
+.orbitCircle {
+    position: absolute;
+    top: 20%;
+    right: 15%;
+    width: 120px;
+    height: 120px;
+    border: 2px solid var(--moss);
+    border-radius: 50%;
+    opacity: 0.15;
+}
+
+.orbitCircle::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--workshop-green);
+    border-radius: 50%;
+}
+
+.cornerBracket {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    width: 60px;
+    height: 60px;
+    border: 3px solid var(--steel-gray);
+    border-right: none;
+    border-bottom: none;
+    opacity: 0.2;
+}
+
+.diamond {
+    position: absolute;
+    bottom: 25%;
+    right: 25%;
+    width: 30px;
+    height: 30px;
+    background: var(--workshop-green);
+    transform: rotate(45deg);
+    opacity: 0.3;
 }
 
 .headerContainer {
-    @apply flex md:gap-10 relative;
-
-    @media screen(md) {
-        @apply static;
-    }
+    @apply flex flex-col items-center text-center max-w-4xl px-4 z-10 relative;
 }
 
 .headerLeft {
-    @apply flex flex-col justify-center gap-y-8;
+    @apply flex flex-col justify-center gap-y-8 items-center;
+}
 
-    @media screen(md) {
-        @apply gap-y-2 relative;
+/* Status badge */
+.statusBadge {
+    display: inline-block;
+    padding: 8px 20px;
+    background: var(--moss);
+    color: var(--warm-white);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.pulse {
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background: var(--workshop-green);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: translateY(-50%) scale(1);
+    }
+    50% {
+        opacity: 0.3;
+        transform: translateY(-50%) scale(1.2);
     }
 }
 
 .title {
-    @apply flex font-serif text-6xl text-blue-950;
+    @apply flex flex-col font-serif text-6xl;
+}
+
+.greeting {
+    font-size: 1.5rem;
+    color: var(--steel-gray);
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.name {
+    color: var(--olive-dark);
+    letter-spacing: -2px;
+    font-weight: normal;
 }
 
 .subtitle {
     @apply text-xl font-sans;
+    color: var(--steel-gray);
 }
 
-.image {
-    @apply hidden;
+/* Geometric separator */
+.separator {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+}
 
-    @media screen(md) {
-        @apply flex object-cover shadow-xl;
-        background-repeat: no-repeat;
-        mask-image: url("/images/paint-splash.png");
-        mask-repeat: repeat;
-        mask-size: 100% 220px;
-        border-radius: 15px;
+.separatorLine {
+    width: 60px;
+    height: 1px;
+    background: var(--dust);
+}
+
+.separatorDiamond {
+    width: 10px;
+    height: 10px;
+    background: var(--workshop-green);
+    transform: rotate(45deg);
+}
+
+/* Side accent */
+.sideAccent {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.serviceMarker {
+    width: 40px;
+    height: 40px;
+    background: var(--rust-red);
+    color: var(--warm-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.serviceMarker:hover {
+    opacity: 1;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .sideAccent {
+        display: none;
+    }
+
+    .geometricBackground .orbitCircle,
+    .geometricBackground .cornerBracket,
+    .geometricBackground .diamond {
+        opacity: 0.05;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .name {
+        letter-spacing: -1px;
     }
 }

@@ -1,17 +1,367 @@
 .contactSection {
-    @media screen(md) {
-        @apply my-36
-    }
-}   
+    @apply scroll-mt-20 mb-32 max-w-6xl mx-auto px-6 relative;
+    background: var(--warm-white);
+    min-height: 80vh;
+}
+
+/* Section Header */
+.sectionHeader {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.cornerBracket {
+    position: absolute;
+    top: -10px;
+    left: -20px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--workshop-green);
+    border-right: none;
+    border-bottom: none;
+}
 
 .title {
-    @apply text-3xl font-serif font-medium capitalize pb-4
+    @apply font-serif text-4xl;
+    color: var(--olive-dark);
+    font-weight: normal;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
-.formFields {
-    @apply border border-black rounded px-2
+.titleUnderline {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-.labels {
-    @apply text-blue-950
+.line {
+    flex: 1;
+    height: 1px;
+    background: var(--dust);
+}
+
+.diamond {
+    width: 12px;
+    height: 12px;
+    background: var(--workshop-green);
+    transform: rotate(45deg);
+}
+
+/* Intro Section */
+.intro {
+    margin-bottom: 60px;
+    max-width: 4xl;
+}
+
+.statusSection {
+    margin-bottom: 30px;
+}
+
+.statusBadge {
+    display: inline-block;
+    padding: 8px 20px;
+    background: var(--moss);
+    color: var(--warm-white);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.pulse {
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background: var(--workshop-green);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: translateY(-50%) scale(1);
+    }
+    50% {
+        opacity: 0.3;
+        transform: translateY(-50%) scale(1.2);
+    }
+}
+
+.introText {
+    color: var(--charcoal);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.emailLink {
+    color: var(--workshop-green);
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+}
+
+.emailLink:hover {
+    color: var(--olive-dark);
+}
+
+.emailLink::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--workshop-green);
+    transition: width 0.3s ease;
+}
+
+.emailLink:hover::after {
+    width: 100%;
+}
+
+/* Form Container */
+.formContainer {
+    position: relative;
+    max-width: 800px;
+}
+
+.workshopForm {
+    background: var(--dust);
+    padding: 40px;
+    position: relative;
+    border: 1px solid var(--dust);
+}
+
+.workshopForm::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--workshop-green);
+    border-right: none;
+    border-bottom: none;
+    opacity: 0.3;
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.fieldGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.fieldLabel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--olive-dark);
+}
+
+.labelMarker {
+    width: 20px;
+    height: 20px;
+    background: var(--workshop-green);
+    color: var(--warm-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    flex-shrink: 0;
+}
+
+.fieldInput,
+.fieldTextarea {
+    padding: 15px 20px;
+    background: var(--warm-white);
+    border: 2px solid var(--dust);
+    font-family: var(--space-grotesk), sans-serif;
+    font-size: 14px;
+    color: var(--charcoal);
+    transition: all 0.3s ease;
+}
+
+.fieldInput:focus,
+.fieldTextarea:focus {
+    outline: none;
+    border-color: var(--workshop-green);
+    background: var(--warm-white);
+    box-shadow: 0 0 0 3px rgba(107, 127, 74, 0.1);
+}
+
+.fieldInput::placeholder,
+.fieldTextarea::placeholder {
+    color: var(--steel-gray);
+    font-style: italic;
+}
+
+.fieldTextarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.6;
+}
+
+.submitSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.responseNote {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    color: var(--steel-gray);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.responseIcon {
+    width: 8px;
+    height: 8px;
+    background: var(--workshop-green);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Form Accents */
+.formAccents {
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.serviceMarker {
+    width: 30px;
+    height: 30px;
+    background: var(--rust-red);
+    color: var(--warm-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.serviceMarker:hover {
+    opacity: 1;
+    transform: translateX(-5px);
+}
+
+/* Background Geometry */
+.backgroundGeometry {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.orbitCircle {
+    position: absolute;
+    top: 15%;
+    right: 10%;
+    width: 150px;
+    height: 150px;
+    border: 1px solid var(--moss);
+    border-radius: 50%;
+    opacity: 0.1;
+}
+
+.orbitCircle::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border: 1px solid var(--workshop-green);
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.meshGrid {
+    position: absolute;
+    bottom: 20%;
+    left: 15%;
+    width: 200px;
+    height: 200px;
+    background-image:
+        linear-gradient(var(--dust) 1px, transparent 1px),
+        linear-gradient(90deg, var(--dust) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .formGrid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .workshopForm {
+        padding: 30px 20px;
+    }
+
+    .formAccents {
+        display: none;
+    }
+
+    .submitSection {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    .backgroundGeometry .orbitCircle,
+    .backgroundGeometry .meshGrid {
+        opacity: 0.05;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .fieldLabel {
+        font-size: 11px;
+    }
+
+    .fieldInput,
+    .fieldTextarea {
+        padding: 12px 15px;
+        font-size: 13px;
+    }
 }

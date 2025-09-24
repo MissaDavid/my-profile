@@ -3,13 +3,43 @@
 @tailwind utilities;
 @tailwind screens;
 
+:root {
+    /* Primary Palette */
+    --workshop-green: #6B7F4A;
+    --olive-dark: #4A5A3A;
+    --moss: #8FA65D;
+
+    /* Earth Tones */
+    --rust-red: #B85C4E;
+    --rust-brown: #8B4513;
+    --clay: #A0522D;
+    --tan-light: #D2B48C;
+    --worn-canvas: #C5B59B;
+
+    /* Neutrals */
+    --steel-gray: #787571;
+    --warm-white: #F5F2ED;
+    --charcoal: #2C2825;
+    --dust: #E8E2D5;
+
+    /* Accent */
+    --signal-orange: #D97638;
+}
+
+body {
+    font-family: var(--space-grotesk), sans-serif;
+    background: var(--warm-white);
+    color: var(--charcoal);
+    line-height: 1.6;
+}
+
 @layer components {
     p {
         @apply mb-6
     }
-    
+
     h2 {
-        @apply text-blue-950
+        color: var(--olive-dark);
     }
 }
 

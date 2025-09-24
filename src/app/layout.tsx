@@ -1,10 +1,10 @@
-import type { Metadata } from "next";
+import type {Metadata} from "next";
 import {SpeedInsights} from "@vercel/speed-insights/next"
 import {Analytics} from '@vercel/analytics/react';
-import { Space_Grotesk, Syne } from "next/font/google";
+import {Space_Grotesk, Syne} from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/navigation";
-import { Toaster } from "react-hot-toast";
+import {Toaster} from "react-hot-toast";
 import Footer from "@/components/footer";
 
 const space_grotesk = Space_Grotesk({ subsets: ["latin"], variable: "--space-grotesk" });
@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${space_grotesk.variable} ${syne.variable} `}>
-      <body className={`text-gray-950`}>
+      <body className={`text-gray-950`} style={{ background: "var(--warm-white)", color: "var(--charcoal)" }}>
         <Navigation />
         {children}
         <Footer />

@@ -1,60 +1,97 @@
 import React from "react";
 import styles from "./about.module.css"
-// import { motion } from "framer-motion";
-
-// import useScrollPosition from "@/hooks/useScrollPosition";
 
 export default function About() {
-  // const scrollY = useScrollPosition();
-
-  
   return (
-    <div id="about" className={styles.about}>
-      {/*<motion.section*/}
-      {/*  animate={scrollY > 0 ? "complete" : "initial"}*/}
-      {/*  variants={{*/}
-      {/*    complete: { opacity: 1, y: 0 },*/}
-      {/*    initial: { opacity: 0, y: "20%" },*/}
-      {/*  }}*/}
-      {/*  initial="initial"*/}
-      {/*  transition={{ duration: 1 }}*/}
-      {/*>*/}
-        <h2 className="text-3xl font-serif font-medium capitalize mb-8">
-          About me
-        </h2>
-        <p>
-          I was born and raised in France, but my curiosity pushed me to discover
-          the world beyond my homeland. My journey began in the bustling streets of
-          Seoul, where I became a translator specialising in Korean literature,
-          with a focus on cinema and traditional music.
-        </p>
-        <p>
-          After a few years filled with publications and movie festivals, I was ready to expand my skills. 
-          I had always wanted to learn how to code, and the line between spoken languages and programing ones seemed very thin!
-          So shortly after finishing a 6 months intensive coding bootcamp, I left for the caffeinated kingdom of Melbourne, Australia.
-          Many months later, I got my first full-stack developer job. And it was A-MA-ZING. Being given
-          problems and being able to translate them into solutions that have a positive impact
-          on users was very fulfilling, and that experience only solidified my desire to stay and grow in the IT industry.
-        </p>
-        <p>
-          I &quot;crossed the ditch&quot; not long after to live in Wellington
-          Te Whanganui-a-Tara, Aotearoa New Zealand, where I worked as a Python Backend
-          Software Engineer in a couple different digital agencies. Focusing on the
-          backend was a deliberate choice that I do not regret. To me, there is more
-          fun in understanding what happens <span className="italic">underneath the hood</span> and bringing every piece of the puzzle together.
-        </p>
+    <section id="about" className={styles.about}>
+      {/* Workshop-style header with geometric accent */}
+      <div className={styles.sectionHeader}>
+        <div className={styles.cornerBracket}></div>
+        <h2 className={styles.title}>About Me</h2>
+        <div className={styles.titleUnderline}>
+          <div className={styles.line}></div>
+          <div className={styles.diamond}></div>
+          <div className={styles.line}></div>
+        </div>
+      </div>
 
-        <p>
-          Finally, I ended my peregrinations in Ottawa, and broadened my horizons by working in cybersecurity. 
-          I also celebrated the grant of my Permanent Residency in 2023: I can now call Canada home!
-        </p>
+      <div className={styles.content}>
+        {/* Journey timeline with geometric markers */}
+        <div className={styles.journeySection}>
+          <div className={styles.journeyItem}>
+            <div className={styles.marker}>01</div>
+            <div className={styles.journeyContent}>
+              <h3 className={styles.journeyTitle}>FRANCE → SEOUL</h3>
+              <p>
+                Born and raised in France, my curiosity drove me beyond my homeland to the bustling streets of
+                Seoul, where I became a translator specializing in Korean literature, cinema and traditional music.
+              </p>
+            </div>
+          </div>
 
-        <p>
-          In my spare time, I like playing video games and D&D, crocheting,
-          playing the violin, teaching myself Unreal Engine... And entertaining
-          my two cats, Buddy and Pib.
-        </p>
-      {/*</motion.section>*/}
-    </div>
+          <div className={styles.journeyItem}>
+            <div className={styles.marker}>02</div>
+            <div className={styles.journeyContent}>
+              <h3 className={styles.journeyTitle}>THE PIVOT</h3>
+              <p>
+                After years of publications and movie festivals, I was ready to expand my skills.
+                The line between spoken languages and programming ones seemed thin! A 6-month intensive bootcamp
+                led me to Melbourne's caffeinated kingdom, where I landed my first full-stack developer role.
+              </p>
+            </div>
+          </div>
+
+          <div className={styles.journeyItem}>
+            <div className={styles.marker}>03</div>
+            <div className={styles.journeyContent}>
+              <h3 className={styles.journeyTitle}>BACKEND FOCUS</h3>
+              <p>
+                I "crossed the ditch" to Wellington, Aotearoa New Zealand, working as a Python Backend Engineer.
+                Focusing on backend was deliberate—there's more rebellion in understanding what happens <span className={styles.emphasis}>underneath the hood</span>.
+              </p>
+            </div>
+          </div>
+
+          <div className={styles.marker}>04</div>
+          <div className={styles.journeyContent}>
+            <h3 className={styles.journeyTitle}>HOME BASE</h3>
+            <p>
+              Finally settled in Ottawa, broadening horizons in cybersecurity.
+              Celebrated my Permanent Residency in 2023—Canada is now home.
+            </p>
+          </div>
+        </div>
+
+        {/* Workshop philosophy section */}
+        <div className={styles.philosophy}>
+          <div className={styles.philosophyHeader}>
+            <div className={styles.serviceMarker}>◈</div>
+            <span className={styles.philosophyTitle}>WORKSHOP PHILOSOPHY</span>
+          </div>
+          <p className={styles.philosophyText}>
+            Building solutions with craftmanship focus. Every problem is a puzzle waiting to be solved,
+            every line of code serves a purpose. Function over flash, but with thoughtful rebellion.
+          </p>
+        </div>
+
+        {/* Personal interests */}
+        <div className={styles.interests}>
+          <h3 className={styles.interestsTitle}>Beyond Code</h3>
+          <div className={styles.interestsTags}>
+            <span className={styles.tag}>Video Games</span>
+            <span className={styles.tag}>D&D</span>
+            <span className={styles.tag}>Crocheting</span>
+            <span className={styles.tag}>Violin</span>
+            <span className={styles.tag}>Unreal Engine</span>
+            <span className={styles.tag}>Cat Whisperer</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Background geometric element */}
+      <div className={styles.backgroundGeometry}>
+        <div className={styles.orbitCircle}></div>
+      </div>
+    </section>
   );
 }
