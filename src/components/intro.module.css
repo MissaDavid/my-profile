@@ -1,5 +1,5 @@
 .homeSection {
-    @apply flex justify-center pt-28 relative min-h-screen;
+    @apply flex justify-center pt-28 relative min-h-screen w-full;
     background: linear-gradient(135deg, var(--warm-white) 0%, var(--dust) 100%);
 }
 
@@ -55,7 +55,7 @@
 }
 
 .headerContainer {
-    @apply flex flex-col items-center text-center max-w-4xl px-4 z-10 relative;
+    @apply flex flex-col items-center text-center w-full max-w-6xl px-6 z-10 relative;
 }
 
 .headerLeft {

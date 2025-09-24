@@ -52,13 +52,15 @@ export default function About() {
             </div>
           </div>
 
-          <div className={styles.marker}>04</div>
-          <div className={styles.journeyContent}>
-            <h3 className={styles.journeyTitle}>HOME BASE</h3>
-            <p>
-              Finally settled in Ottawa, broadening horizons in cybersecurity.
-              Celebrated my Permanent Residency in 2023—Canada is now home.
-            </p>
+          <div className={styles.journeyItem}>
+            <div className={styles.marker}>04</div>
+            <div className={styles.journeyContent}>
+              <h3 className={styles.journeyTitle}>HOME BASE</h3>
+              <p>
+                Finally settled in Ottawa, broadening horizons in cybersecurity.
+                Celebrated my Permanent Residency in 2023—Canada is now home.
+              </p>
+            </div>
           </div>
         </div>
 

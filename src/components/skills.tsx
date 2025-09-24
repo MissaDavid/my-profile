@@ -34,19 +34,6 @@ const categoryTitles: Record<string, string> = {
   speech: "COMMUNICATION"
 };
 
-const SkillLevel = ({level}: {level: number}) => {
-  return (
-    <div className={styles.skillLevel}>
-      {[1, 2, 3].map((dot) => (
-        <div
-          key={dot}
-          className={`${styles.levelDot} ${dot <= level ? styles.activeDot : ''}`}
-        />
-      ))}
-    </div>
-  );
-};
-
 const SkillItem = ({skill}: {skill: Skill}) => {
   return (
     <div className={styles.skillItem}>
@@ -54,7 +41,6 @@ const SkillItem = ({skill}: {skill: Skill}) => {
         <div className={styles.skillLogo}>{skill.logo}</div>
         <span className={styles.skillName}>{skill.name}</span>
       </div>
-      <SkillLevel level={skill.level} />
     </div>
   );
 };

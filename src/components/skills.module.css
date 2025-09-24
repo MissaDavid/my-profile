@@ -127,7 +127,6 @@
 .skillItem {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 15px 20px;
     background: transparent;
     border: 1px solid var(--dust);
@@ -176,33 +175,6 @@
     letter-spacing: 0.5px;
 }
 
-/* Skill Level Indicators */
-.skillLevel {
-    display: flex;
-    gap: 6px;
-    align-items: center;
-}
-
-.levelDot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--dust);
-    border: 1px solid var(--steel-gray);
-    transition: all 0.3s ease;
-}
-
-.activeDot {
-    background: var(--workshop-green);
-    border-color: var(--workshop-green);
-    box-shadow: 0 0 6px rgba(107, 127, 74, 0.4);
-}
-
-.skillItem:hover .activeDot {
-    background: var(--rust-red);
-    border-color: var(--rust-red);
-    box-shadow: 0 0 8px rgba(184, 92, 78, 0.5);
-}
 
 /* Background Geometry */
 .backgroundGeometry {
@@ -228,18 +200,6 @@
     opacity: 0.1;
 }
 
-.cornerAccent {
-    position: absolute;
-    bottom: 20%;
-    left: 10%;
-    width: 80px;
-    height: 80px;
-    border: 3px solid var(--steel-gray);
-    border-right: none;
-    border-bottom: none;
-    opacity: 0.15;
-    transform: rotate(180deg);
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -267,8 +227,7 @@
         font-size: 12px;
     }
 
-    .backgroundGeometry .meshPattern,
-    .backgroundGeometry .cornerAccent {
+    .backgroundGeometry .meshPattern {
         opacity: 0.05;
     }
 }

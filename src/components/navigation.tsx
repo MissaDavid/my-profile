@@ -43,8 +43,6 @@ export default function Navigation() {
                   style={{ color: "var(--steel-gray)" }}
                   href={link.hash}
                 >
-                  <span className="relative z-10">{link.name}</span>
-
                   {/* Workshop-style hover background */}
                   <div
                     className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
