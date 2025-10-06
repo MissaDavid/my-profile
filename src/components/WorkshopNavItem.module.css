@@ -1,0 +1,93 @@
+.navItem {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    background: none;
+    border: none;
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    min-height: 44px;
+    font-weight: bold;
+}
+
+.navItem:focus-visible {
+    outline: 3px solid #8b4a3c;
+    outline-offset: 2px;
+}
+
+.dark {
+    color: #b8956a;
+}
+
+.dark:hover {
+    color: #c4a572;
+}
+
+.dark::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #8b4a3c;
+    transition: width 0.3s ease;
+}
+
+.dark:hover::after {
+    width: 100%;
+}
+
+.dark.active {
+    color: #c4a572;
+}
+
+.dark.active::after {
+    width: 100%;
+}
+
+.light {
+    color: #6b3a2c;
+}
+
+.light:hover {
+    color: #8b4a3c;
+}
+
+.light::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #8b4a3c;
+    transition: width 0.3s ease;
+}
+
+.light:hover::after {
+    width: 100%;
+}
+
+.light.active {
+    color: #8b4a3c;
+}
+
+.light.active::after {
+    width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .navItem {
+        transition: none;
+    }
+
+    .dark::after,
+    .light::after {
+        transition: none;
+    }
+}

@@ -2,9 +2,38 @@
 import React from "react";
 
 import toast from "react-hot-toast";
-import SubmitButton from "@/components/submitButton";
+import WorkshopButton from "@/components/WorkshopButton";
 import {sendEmail} from "@/actions/sendEmail";
+import {useFormStatus} from "react-dom";
+import {FaPaperPlane} from "react-icons/fa";
 import styles from "./contact.module.css";
+
+const SubmitButtonWrapper = () => {
+  const { pending } = useFormStatus();
+  return (
+    <WorkshopButton
+      type="submit"
+      disabled={pending}
+      theme="dark"
+      variant="primary"
+    >
+      {pending ? (
+        <>
+          <div
+            className="animate-spin h-4 w-4 rounded-full border-2 border-t-transparent"
+            style={{ borderColor: "var(--warm-white)" }}
+          />
+          Dispatching...
+        </>
+      ) : (
+        <>
+          Deploy Message
+          <FaPaperPlane style={{ opacity: 0.8 }} />
+        </>
+      )}
+    </WorkshopButton>
+  );
+};
 
 const Contact = () => {
   return (
@@ -105,7 +134,7 @@ const Contact = () => {
           </div>
 
           <div className={styles.submitSection}>
-            <SubmitButton/>
+            <SubmitButtonWrapper />
             <div className={styles.responseNote}>
               <span className={styles.responseIcon}>●</span>
               Response within 24-48 hours

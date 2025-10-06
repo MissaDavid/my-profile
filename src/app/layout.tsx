@@ -1,14 +1,15 @@
 import type {Metadata} from "next";
 import {SpeedInsights} from "@vercel/speed-insights/next"
 import {Analytics} from '@vercel/analytics/react';
-import {Space_Grotesk, Syne} from "next/font/google";
+import {Inter, JetBrains_Mono} from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/navigation";
+import ThemeToggle from "@/components/ThemeToggle";
 import {Toaster} from "react-hot-toast";
 import Footer from "@/components/footer";
 
-const space_grotesk = Space_Grotesk({ subsets: ["latin"], variable: "--space-grotesk" });
-const syne = Syne({subsets: ["latin"], variable: "--syne"})
+const inter = Inter({ subsets: ["latin"], variable: "--inter" });
+const jetbrains_mono = JetBrains_Mono({subsets: ["latin"], variable: "--jetbrains-mono"})
 
 export const metadata: Metadata = {
   title: "Melissa Tamplin - Profile",
@@ -21,8 +22,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${space_grotesk.variable} ${syne.variable} `}>
-      <body className={`text-gray-950`} style={{ background: "var(--warm-white)", color: "var(--charcoal)" }}>
+    <html lang="en" className={`${inter.variable} ${jetbrains_mono.variable} `}>
+      <body className={`text-gray-950`} style={{ background: "var(--workshop-bg)", color: "var(--workshop-text)", margin: 0, padding: 0, width: "100%" }}>
+        <ThemeToggle />
         <Navigation />
         {children}
         <Footer />

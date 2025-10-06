@@ -367,7 +367,7 @@ const ContactStory = () => {
 };
 
 const meta: Meta<typeof ContactStory> = {
-  title: 'Workshop/Contact',
+  title: 'Workshop/Pages/Contact',
   component: ContactStory,
   parameters: {
     layout: 'fullscreen',

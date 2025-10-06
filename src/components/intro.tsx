@@ -1,54 +1,73 @@
 import React from "react";
-import CtaButtons from "@/components/ctaButtons";
+import Link from "next/link";
+import WorkshopButton from "@/components/WorkshopButton";
+import {BsGithub, BsLinkedin} from "react-icons/bs";
+import {HiDownload} from "react-icons/hi";
 import styles from "./intro.module.css";
 
 export default function Intro() {
   return (
     <section
       id="home"
-      className={styles.homeSection}
+      className={styles.hero}
     >
-      {/* Background geometric elements */}
-      <div className={styles.geometricBackground}>
-        <div className={styles.orbitCircle}></div>
-        <div className={styles.cornerBracket}></div>
-        <div className={styles.diamond}></div>
-      </div>
+      <div className={styles.heroContainer}>
+        <div className={styles.heroContent}>
+          {/* Hero Label */}
+          <span className={styles.heroLabel}>Full-Stack Craftsperson</span>
 
-      <div className={styles.headerContainer}>
-        <div className={styles.headerLeft}>
-          {/* Status indicator */}
-          <div className={styles.statusBadge}>
-            <div className={styles.pulse}></div>
-            Currently Available
+          {/* Hero Title */}
+          <h1 className={styles.heroTitle}>Melissa</h1>
+
+          {/* Hero Subtitle */}
+          <p className={styles.heroSubtitle}>Software Developer</p>
+
+          {/* Hero Description */}
+          <p className={styles.heroDescription}>
+            Building robust digital solutions with care and precision. Based in Ottawa, Canada,
+            I approach each project as a maker who believes in doing things right.
+          </p>
+
+          {/* Skills Tags */}
+          <div className={styles.heroSkills}>
+            <span className={styles.skillTag}>Python</span>
+            <span className={styles.skillTag}>FastAPI</span>
+            <span className={styles.skillTag}>TypeScript</span>
+            <span className={styles.skillTag}>React</span>
+            <span className={styles.skillTag}>Next.js</span>
+            <span className={styles.skillTag}>PostgreSQL</span>
           </div>
 
-          <div className={styles.title}>
-            <span className={styles.greeting}>Hi, my name is</span>
-            <br/>
-            <span className={styles.name}>Melissa</span>
-          </div>
+          {/* CTA Buttons */}
+          <div className={styles.heroCta}>
+            <Link href="#contact">
+              <WorkshopButton variant="primary" theme="dark">
+                Contact Me
+              </WorkshopButton>
+            </Link>
 
-          <div className={styles.subtitle}>
-            I&apos;m a Software Developer living in Ottawa, Canada
-          </div>
+            <a href="/melissa-tamplin-2025-resume.pdf" target="_blank" rel="noopener noreferrer">
+              <WorkshopButton variant="secondary" theme="dark">
+                <HiDownload />
+                View CV
+              </WorkshopButton>
+            </a>
 
-          {/* Geometric separator */}
-          <div className={styles.separator}>
-            <div className={styles.separatorLine}></div>
-            <div className={styles.separatorDiamond}></div>
-            <div className={styles.separatorLine}></div>
-          </div>
+            <div className={styles.socialButtons}>
+              <a href="https://www.linkedin.com/in/mel-david/" target="_blank" rel="noopener noreferrer">
+                <WorkshopButton variant="secondary" theme="dark" ariaLabel="LinkedIn">
+                  <BsLinkedin />
+                </WorkshopButton>
+              </a>
 
-          <CtaButtons/>
+              <a href="https://github.com/MissaDavid" target="_blank" rel="noopener noreferrer">
+                <WorkshopButton variant="secondary" theme="dark" ariaLabel="Github">
+                  <BsGithub />
+                </WorkshopButton>
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-
-      {/* Side geometric accent */}
-      <div className={styles.sideAccent}>
-        <div className={styles.serviceMarker}>◈</div>
-        <div className={styles.serviceMarker}>▶</div>
-        <div className={styles.serviceMarker}>◆</div>
       </div>
     </section>
   );
