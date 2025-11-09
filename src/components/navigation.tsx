@@ -4,9 +4,30 @@ import {motion} from "framer-motion";
 import Link from "next/link";
 
 import {links} from "@/data/content";
+import Logo from "./Logo";
 
 export default function Navigation() {
   const [activeSection, setActiveSection] = useState("");
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+
+  useEffect(() => {
+    // Detect theme from document
+    const updateTheme = () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme') as 'light' | 'dark' || 'light';
+      setTheme(currentTheme);
+    };
+
+    updateTheme();
+
+    // Watch for theme changes
+    const observer = new MutationObserver(updateTheme);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-theme'],
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,28 +67,23 @@ export default function Navigation() {
       ></motion.div>
       <nav className="flex fixed top-[0.25rem] left-1/2 h-14 -translate-x-1/2 py-3 px-4 w-full max-w-7xl">
         <div className="flex items-center justify-between w-full">
-          {/* Logo with blinking cursor */}
+          {/* Logo and brand */}
           <Link
             href="/"
-            className="font-bold text-base sm:text-lg relative logo-with-cursor"
-            style={{
-              fontFamily: "var(--jetbrains-mono)",
-              color: "var(--workshop-brass)",
-              letterSpacing: "-0.02em"
-            }}
+            className="flex items-end gap-1.5"
           >
-            meibee.dev
+            <Logo variant={theme === 'dark' ? 'brass' : 'original'} size={32} />
+            <span
+              className="font-bold text-base sm:text-lg"
+              style={{
+                fontFamily: "var(--jetbrains-mono)",
+                color: "var(--workshop-brass)",
+                letterSpacing: "-0.02em"
+              }}
+            >
+              meibee.dev
+            </span>
           </Link>
-
-          {/* Geometric accent - corner bracket (hidden on mobile) */}
-          <div
-            className="w-6 h-6 mr-2 sm:mr-4 hidden sm:block"
-            style={{
-              border: `2px solid var(--leather-tan)`,
-              borderRight: 'none',
-              borderBottom: 'none'
-            }}
-          />
 
           <ul className="flex items-center justify-center gap-x-2 sm:gap-x-4 text-[0.65rem] sm:text-[0.9rem] font-medium uppercase tracking-wider">
             {links.map((link) => (
@@ -86,17 +102,6 @@ export default function Navigation() {
               </motion.li>
             ))}
           </ul>
-
-          {/* Geometric accent - corner bracket (right, hidden on mobile) */}
-          <div
-            className="w-6 h-6 ml-2 sm:ml-4 hidden sm:block"
-            style={{
-              border: `2px solid var(--leather-tan)`,
-              borderLeft: 'none',
-              borderBottom: 'none',
-              transform: 'rotate(90deg)'
-            }}
-          />
         </div>
       </nav>
     </header>

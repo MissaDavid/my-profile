@@ -1,0 +1,8 @@
+<svg width="32" height="32" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Center hexagon (body) - filled -->
+  <polygon points="100,60 130,77.5 130,112.5 100,130 70,112.5 70,77.5" fill="#c4a572" stroke="#c4a572" stroke-width="2.5"/>
+  <!-- Left hexagon (wing) - outlined -->
+  <polygon points="70,42.5 100,60 100,95 70,112.5 40,95 40,60" fill="none" stroke="#c4a572" stroke-width="2.5"/>
+  <!-- Right hexagon (wing) - outlined -->
+  <polygon points="130,42.5 160,60 160,95 130,112.5 100,95 100,60" fill="none" stroke="#c4a572" stroke-width="2.5"/>
+</svg>

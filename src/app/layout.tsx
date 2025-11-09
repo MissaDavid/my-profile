@@ -14,6 +14,9 @@ const jetbrains_mono = JetBrains_Mono({subsets: ["latin"], variable: "--jetbrain
 export const metadata: Metadata = {
   title: "Melissa Tamplin - Profile",
   description: "Mel's profile",
+  icons: {
+    icon: '/favicon-original.svg',
+  },
 };
 
 export default function RootLayout({
