@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import {motion} from "framer-motion";
+import Logo from "./Logo";
 
 type DividerProps = { className?: string };
 
@@ -12,34 +13,19 @@ function Divider({ className}: DividerProps ) {
       animate={{opacity: 1, y: 0}}
       transition={{delay: 0.125, duration: 0.6}}
     >
-      {/* Workshop geometric divider */}
+      {/* Left side geometric line */}
       <div
-        className="w-12 h-px"
-        style={{ background: "var(--dust)" }}
+        className="w-24 h-px"
+        style={{ background: "var(--steel-gray)", opacity: 0.4 }}
       />
+
+      {/* Logo centerpiece */}
+      <Logo size={32} variant="two-tone" />
+
+      {/* Right side geometric line */}
       <div
-        className="w-3 h-3 rotate-45 opacity-60"
-        style={{ background: "var(--workshop-green)" }}
-      />
-      <div
-        className="w-16 h-px"
-        style={{ background: "var(--steel-gray)", opacity: 0.3 }}
-      />
-      <div
-        className="w-2 h-2 rounded-full"
-        style={{ background: "var(--rust-red)", opacity: 0.8 }}
-      />
-      <div
-        className="w-16 h-px"
-        style={{ background: "var(--steel-gray)", opacity: 0.3 }}
-      />
-      <div
-        className="w-3 h-3 rotate-45 opacity-60"
-        style={{ background: "var(--workshop-green)" }}
-      />
-      <div
-        className="w-12 h-px"
-        style={{ background: "var(--dust)" }}
+        className="w-24 h-px"
+        style={{ background: "var(--steel-gray)", opacity: 0.4 }}
       />
     </motion.div>
   );
