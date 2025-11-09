@@ -94,7 +94,7 @@ export default function Navigation() {
           </Link>
 
           {/* Workshop Navigation Items */}
-          <ul className="flex items-center justify-center gap-x-1 text-[0.65rem] sm:text-[0.9rem] font-medium">
+          <ul className="flex items-center justify-center gap-x-2 sm:gap-x-4 text-[0.65rem] sm:text-[0.9rem] font-medium uppercase tracking-wider">
             {links.map((link) => (
               <motion.li
                 key={link.hash}
@@ -108,6 +108,7 @@ export default function Navigation() {
                   onClick={() => handleNavClick(link.hash)}
                   theme={theme}
                   ariaCurrent={activeSection === link.hash}
+                  className="px-2 sm:px-4 py-2"
                 >
                   {link.name}
                 </WorkshopNavItem>
