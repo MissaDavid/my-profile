@@ -106,3 +106,77 @@ export const DarkTheme: Story = {
     backgrounds: { default: 'dark' },
   },
 };
+
+export const WithMarker: Story = {
+  args: {
+    title: 'Phase One',
+    theme: 'light',
+    marker: '01',
+    children: (
+      <p>
+        Card with a workshop marker in the top-left corner. Markers can be
+        numbers or symbols like ◈, ◆, ▶, ●.
+      </p>
+    ),
+  },
+  parameters: {
+    backgrounds: { default: 'light' },
+  },
+};
+
+export const WithSkillBadge: Story = {
+  args: {
+    title: 'Translation Craft',
+    theme: 'light',
+    skillBadge: 'Attention to Detail',
+    children: (
+      <p>
+        Card with a skill badge in the top-right corner. Badges highlight
+        key skills or attributes developed in this phase.
+      </p>
+    ),
+  },
+  parameters: {
+    backgrounds: { default: 'light' },
+  },
+};
+
+export const WithMarkerAndBadge: Story = {
+  args: {
+    title: 'Language & Precision',
+    theme: 'light',
+    marker: '01',
+    skillBadge: 'Attention to Detail',
+    children: (
+      <p>
+        Started as a translator specializing in Korean language—literature,
+        cinema, traditional arts. Turns out translating a 400-page novel teaches
+        you a lot about precision: every word carries weight, context shapes
+        meaning, and quality lives in the details most people never see.
+      </p>
+    ),
+  },
+  parameters: {
+    backgrounds: { default: 'light' },
+  },
+};
+
+export const StationCard: Story = {
+  args: {
+    title: 'Backend Station',
+    theme: 'light',
+    marker: '◈',
+    statusLight: false,
+    children: (
+      <div>
+        <p style={{ fontStyle: 'italic', marginBottom: '1rem' }}>Primary workshop area</p>
+        <p>
+          Python • Django • FastAPI • Flask • C# • .NET • PostgreSQL
+        </p>
+      </div>
+    ),
+  },
+  parameters: {
+    backgrounds: { default: 'light' },
+  },
+};
