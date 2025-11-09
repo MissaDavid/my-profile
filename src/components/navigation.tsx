@@ -5,6 +5,7 @@ import Link from "next/link";
 
 import {links} from "@/data/content";
 import Logo from "./Logo";
+import WorkshopNavItem from "./WorkshopNavItem";
 
 export default function Navigation() {
   const [activeSection, setActiveSection] = useState("");
@@ -53,6 +54,13 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleNavClick = (href: string) => {
+    const element = document.getElementById(href.substring(1));
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <header className="z-[999] relative">
       <motion.div
@@ -85,7 +93,8 @@ export default function Navigation() {
             </span>
           </Link>
 
-          <ul className="flex items-center justify-center gap-x-2 sm:gap-x-4 text-[0.65rem] sm:text-[0.9rem] font-medium uppercase tracking-wider">
+          {/* Workshop Navigation Items */}
+          <ul className="flex items-center justify-center gap-x-1 text-[0.65rem] sm:text-[0.9rem] font-medium">
             {links.map((link) => (
               <motion.li
                 key={link.hash}
@@ -93,12 +102,15 @@ export default function Navigation() {
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
               >
-                <Link
-                  className={`nav-link px-2 sm:px-4 py-2 relative ${activeSection === link.hash ? 'active' : ''}`}
+                <WorkshopNavItem
                   href={link.hash}
+                  active={activeSection === link.hash}
+                  onClick={() => handleNavClick(link.hash)}
+                  theme={theme}
+                  ariaCurrent={activeSection === link.hash}
                 >
                   {link.name}
-                </Link>
+                </WorkshopNavItem>
               </motion.li>
             ))}
           </ul>
