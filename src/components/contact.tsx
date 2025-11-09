@@ -3,6 +3,7 @@ import React from "react";
 
 import toast from "react-hot-toast";
 import WorkshopButton from "@/components/WorkshopButton";
+import WorkshopInput from "@/components/WorkshopInput";
 import {sendEmail} from "@/actions/sendEmail";
 import {useFormStatus} from "react-dom";
 import {FaPaperPlane} from "react-icons/fa";
@@ -87,14 +88,14 @@ const Contact = () => {
                 <span className={styles.labelMarker}>◈</span>
                 Email Address
               </label>
-              <input
-                type="email"
+              <WorkshopInput
                 id="email"
                 name="senderEmail"
-                required={true}
-                autoComplete="email"
-                className={styles.fieldInput}
+                type="email"
+                required
                 placeholder="your.email@domain.com"
+                theme="light"
+                ariaLabel="Your email address"
               />
             </div>
 
@@ -103,16 +104,14 @@ const Contact = () => {
                 <span className={styles.labelMarker}>◆</span>
                 Name
               </label>
-              <input
-                type="text"
+              <WorkshopInput
                 id="name"
                 name="senderName"
-                minLength={1}
-                maxLength={100}
-                required={true}
-                autoComplete="name"
-                className={styles.fieldInput}
+                type="text"
+                required
                 placeholder="Your name"
+                theme="light"
+                ariaLabel="Your name"
               />
             </div>
           </div>
