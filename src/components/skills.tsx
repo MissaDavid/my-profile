@@ -85,11 +85,11 @@ const Skills = () => {
       <div className={styles.philosophy}>
         <p>
           <span className={styles.emphasis}>Backend-focused craftsperson</span> comfortable across the full stack.
-          Not afraid of new languages or frameworks—give me Rust and I'll take the challenge gladly.
+          Not afraid of new languages or frameworks—give me Rust and I&apos;ll take the challenge gladly.
         </p>
         <p>
           Five years building everything from startup MVPs to enterprise systems. REST APIs, ORMs, raw SQL,
-          mentoring developers at all levels. The goal: meaningful projects that make people's lives better.
+          mentoring developers at all levels. The goal: meaningful projects that make people&apos;s lives better.
         </p>
       </div>
 

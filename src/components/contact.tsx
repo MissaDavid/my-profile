@@ -42,7 +42,7 @@ const Contact = () => {
       {/* Workshop-style header */}
       <div className={styles.sectionHeader}>
         <div className={styles.cornerBracket}></div>
-        <h2 className={styles.title}>Let's Build Something</h2>
+        <h2 className={styles.title}>Let&apos;s Build Something</h2>
         <div className={styles.titleUnderline}>
           <div className={styles.line}></div>
           <div className={styles.diamond}></div>

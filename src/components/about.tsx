@@ -36,7 +36,7 @@ export default function About() {
               <p>
                 After years of publications and movie festivals, I was ready to expand my skills.
                 The line between spoken languages and programming ones seemed thin! A 6-month intensive bootcamp
-                led me to Melbourne's caffeinated kingdom, where I landed my first full-stack developer role.
+                led me to Melbourne&apos;s caffeinated kingdom, where I landed my first full-stack developer role.
               </p>
             </div>
           </div>
@@ -46,8 +46,8 @@ export default function About() {
             <div className={styles.journeyContent}>
               <h3 className={styles.journeyTitle}>BACKEND FOCUS</h3>
               <p>
-                I "crossed the ditch" to Wellington, Aotearoa New Zealand, working as a Python Backend Engineer.
-                Focusing on backend was deliberate—there's more rebellion in understanding what happens <span className={styles.emphasis}>underneath the hood</span>.
+                I &ldquo;crossed the ditch&rdquo; to Wellington, Aotearoa New Zealand, working as a Python Backend Engineer.
+                Focusing on backend was deliberate—there&apos;s more rebellion in understanding what happens <span className={styles.emphasis}>underneath the hood</span>.
               </p>
             </div>
           </div>
