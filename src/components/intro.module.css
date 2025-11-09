@@ -53,6 +53,16 @@
     max-width: 700px;
 }
 
+/* Hero Hook */
+.heroHook {
+    font-style: italic;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--workshop-brass);
+    margin-bottom: 1.5rem;
+    font-family: var(--syne), serif;
+}
+
 /* Hero Label */
 .heroLabel {
     display: inline-block;
@@ -98,6 +108,14 @@
     position: absolute;
     left: 0;
     color: var(--workshop-accent, #8b4a3c);
+}
+
+/* Hero Location */
+.heroLocation {
+    font-size: 1rem;
+    color: var(--steel-gray);
+    margin-bottom: 1.5rem;
+    font-family: var(--space-grotesk), sans-serif;
 }
 
 /* Hero Description */

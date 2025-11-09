@@ -13,36 +13,46 @@ export default function Intro() {
     >
       <div className={styles.heroContainer}>
         <div className={styles.heroContent}>
-          {/* Hero Label */}
-          <span className={styles.heroLabel}>Full-Stack Craftsperson</span>
+          {/* Hero Hook */}
+          <p className={styles.heroHook}>
+            &ldquo;From translation work to building backend systems—precision work takes many forms.&rdquo;
+          </p>
 
           {/* Hero Title */}
-          <h1 className={styles.heroTitle}>Melissa</h1>
+          <h1 className={styles.heroTitle}>Melissa Tamplin</h1>
 
           {/* Hero Subtitle */}
-          <p className={styles.heroSubtitle}>Software Developer</p>
+          <p className={styles.heroSubtitle}>Full-Stack Craftsperson | Backend-Focused</p>
+
+          {/* Hero Location */}
+          <p className={styles.heroLocation}>Based in Ottawa, Canada</p>
 
           {/* Hero Description */}
           <p className={styles.heroDescription}>
-            Building robust digital solutions with care and precision. Based in Ottawa, Canada,
-            I approach each project as a maker who believes in doing things right.
+            I build robust digital solutions with the same care and precision required for translation:
+            attention to detail, understanding what lies underneath, and function over flash.
           </p>
 
           {/* Skills Tags */}
           <div className={styles.heroSkills}>
             <span className={styles.skillTag}>Python</span>
-            <span className={styles.skillTag}>FastAPI</span>
+            <span className={styles.skillTag}>.NET/C#</span>
             <span className={styles.skillTag}>TypeScript</span>
-            <span className={styles.skillTag}>React</span>
-            <span className={styles.skillTag}>Next.js</span>
             <span className={styles.skillTag}>PostgreSQL</span>
+            <span className={styles.skillTag}>Docker</span>
           </div>
 
           {/* CTA Buttons */}
           <div className={styles.heroCta}>
             <Link href="#contact">
               <WorkshopButton variant="primary" theme="dark">
-                Contact Me
+                Start a Project
+              </WorkshopButton>
+            </Link>
+
+            <Link href="#skills">
+              <WorkshopButton variant="secondary" theme="dark">
+                View Toolkit
               </WorkshopButton>
             </Link>
 
