@@ -38,37 +38,7 @@ npm run lint
 ## Workshop Design System
 
 ### Visual Identity
-- **Philosophy:** Function over flash, utilitarian craftsmanship with subtle rebellion
-- **Color Palette:** Earthy workshop tones replacing previous blue/yellow scheme
-- **Typography:** Space Grotesk (accessibility) and Syne fonts with workshop hierarchy
-- **Geometric Elements:** Corner brackets, diamonds, orbit circles, service markers throughout
-- **No Personal Photos:** Complete removal of personal imagery for privacy/rebellion aesthetic
-
-### Workshop Color Palette
-```css
-:root {
-    /* Primary Palette */
-    --workshop-green: #6B7F4A;
-    --olive-dark: #4A5A3A;
-    --moss: #8FA65D;
-
-    /* Earth Tones */
-    --rust-red: #B85C4E;
-    --rust-brown: #8B4513;
-    --clay: #A0522D;
-    --tan-light: #D2B48C;
-    --worn-canvas: #C5B59B;
-
-    /* Neutrals */
-    --steel-gray: #787571;
-    --warm-white: #F5F2ED;
-    --charcoal: #2C2825;
-    --dust: #E8E2D5;
-
-    /* Accent */
-    --signal-orange: #D97638;
-}
-```
+See Design System in Storybook
 
 ## Project Architecture
 
@@ -105,50 +75,7 @@ src/
 └── data/             # Static content and configuration
     └── content.ts    # Skills data with workshop categorization
 .storybook/           # Storybook configuration
-branding.html         # Original workshop design system reference
 ```
-
-### Workshop Components Architecture
-
-**Navigation:** Canvas background with geometric corner brackets, diamond separators, workshop green hover states
-
-**Intro Section:** "Currently Available" pulsing status badge, geometric background elements (orbit circles, diamonds), service markers, rebellious typography hierarchy
-
-**About Section:** Journey timeline with numbered service markers, workshop philosophy callout, interactive skill tags, geometric background accents
-
-**Skills Section:** "Workshop Arsenal" layout with:
-- Service markers for categories (◈ ◆ ▶ ● ▲ ■)
-- Skill level indicators (1-3 dots)
-- Workshop color-coded hover states
-- Background mesh patterns
-
-**Contact Form:** "Let's Build Something" with:
-- Workshop form styling with geometric field markers
-- "Deploy Message" button with corner bracket accent
-- Status indicators and response timing
-- Workshop background geometry
-
-**Footer:** "Workshop Built" signature with corner brackets, tech stack showcase, workshop philosophy tagline
-
-### Workshop Interactive Elements
-
-**Mechanical Animations:**
-- Hover lift effects (translateY(-2px))
-- Pulsing status indicators
-- Corner bracket accents on buttons
-- Service marker hover interactions
-
-**Geometric Accents:**
-- Corner brackets (workshop signature element)
-- Diamond separators and backgrounds
-- Orbit circles with inner elements
-- Mesh and dot patterns for texture
-
-**Workshop Button System:**
-- Primary: workshop-green background
-- Secondary: outlined workshop-green
-- Accent: rust-red for emphasis
-- All with corner bracket accents and mechanical hover
 
 ### Configuration Notes
 
@@ -158,14 +85,6 @@ branding.html         # Original workshop design system reference
 - **Environment:** Requires `.env.local` for email functionality (Resend API key)
 - **Analytics:** Vercel Speed Insights and Analytics integrated in layout
 - **Storybook:** All components have isolated stories for development
-
-### Content Management
-
-All site content (skills, navigation) is centralized in `src/data/content.ts`. Skills include:
-- Workshop categorization with geometric icons
-- Skill levels (1-3) with visual dot indicators
-- React component logos from react-icons
-- Workshop-themed category titles (e.g., "COMMUNICATION" for speech)
 
 ### Workshop Design Principles
 1. **Utilitarian:** Every element serves a purpose
