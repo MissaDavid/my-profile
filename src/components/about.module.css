@@ -54,7 +54,62 @@
   z-index: 10;
 }
 
-/* Journey Section */
+/* Craft Phases */
+.craftPhases {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.phaseCard {
+  position: relative;
+  width: 100%;
+}
+
+.phaseTitle {
+  font-family: var(--syne), serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--olive-dark);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.phaseContent {
+  font-family: var(--space-grotesk), sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--charcoal);
+}
+
+/* Beyond the Keyboard */
+.beyondCode {
+  background: var(--dust);
+  padding: 30px;
+  border-left: 4px solid var(--workshop-green);
+  margin-top: 40px;
+}
+
+.beyondTitle {
+  font-family: var(--syne), serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--olive-dark);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.beyondContent {
+  font-family: var(--space-grotesk), sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--charcoal);
+}
+
+/* Journey Section (old styles - to be removed) */
 .journeySection {
   margin-bottom: 60px;
 }
