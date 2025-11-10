@@ -23,6 +23,7 @@ export default function About() {
             theme="light"
             marker="01"
             skillBadge="Attention to Detail"
+            statusLight={false}
             className={styles.phaseCard}
           >
             <h3 className={styles.phaseTitle}>Language & Precision</h3>
@@ -39,6 +40,7 @@ export default function About() {
             theme="light"
             marker="02"
             skillBadge="Problem Solving"
+            statusLight={false}
             className={styles.phaseCard}
           >
             <h3 className={styles.phaseTitle}>Building Systems</h3>
@@ -56,6 +58,7 @@ export default function About() {
             theme="light"
             marker="03"
             skillBadge="System Design"
+            statusLight={false}
             className={styles.phaseCard}
           >
             <h3 className={styles.phaseTitle}>What Lies Beneath</h3>
