@@ -24,11 +24,11 @@ const SubmitButtonWrapper = () => {
             className="animate-spin h-4 w-4 rounded-full border-2 border-t-transparent"
             style={{ borderColor: "var(--warm-white)" }}
           />
-          Dispatching...
+          Sending...
         </>
       ) : (
         <>
-          Deploy Message
+          Start the Conversation
           <FaPaperPlane style={{ opacity: 0.8 }} />
         </>
       )}
@@ -42,7 +42,7 @@ const Contact = () => {
       {/* Workshop-style header */}
       <div className={styles.sectionHeader}>
         <div className={styles.cornerBracket}></div>
-        <h2 className={styles.title}>Let&apos;s Build Something</h2>
+        <h2 className={styles.title}>Let&apos;s Build Together</h2>
         <div className={styles.titleUnderline}>
           <div className={styles.line}></div>
           <div className={styles.diamond}></div>
@@ -52,19 +52,17 @@ const Contact = () => {
 
       {/* Workshop philosophy intro */}
       <div className={styles.intro}>
-        <div className={styles.statusSection}>
-          <div className={styles.statusBadge}>
-            <div className={styles.pulse}></div>
-            Currently Available for Projects
-          </div>
-        </div>
-
         <p className={styles.introText}>
-          Ready to collaborate on meaningful projects. Direct contact: <a href="mailto:contact@meibee.dev" className={styles.emailLink}>contact@meibee.dev</a>
+          Available for consulting projects and collaborative builds.
+          Whether you need backend architecture, full-stack development,
+          or someone who can bridge technical and human communication—
+          let&apos;s talk.
         </p>
-
         <p className={styles.introText}>
-          Or use the workshop communication form below—function over flash, but it gets the job done.
+          Direct contact: <a href="mailto:contact@meibee.dev" className={styles.emailLink}>contact@meibee.dev</a>
+        </p>
+        <p className={styles.introText}>
+          Or use the form below.
         </p>
       </div>
 
@@ -128,25 +126,14 @@ const Contact = () => {
               required={true}
               autoComplete="off"
               className={styles.fieldTextarea}
-              placeholder="Tell me about your project, challenges, or ideas. What are we building together?"
+              placeholder="Tell me about your project, the challenges you're facing, or what you're hoping to build."
             />
           </div>
 
           <div className={styles.submitSection}>
             <SubmitButtonWrapper />
-            <div className={styles.responseNote}>
-              <span className={styles.responseIcon}>●</span>
-              Response within 24-48 hours
-            </div>
           </div>
         </form>
-
-        {/* Form accent elements */}
-        <div className={styles.formAccents}>
-          <div className={styles.serviceMarker}>01</div>
-          <div className={styles.serviceMarker}>02</div>
-          <div className={styles.serviceMarker}>03</div>
-        </div>
       </div>
 
       {/* Background geometric elements */}
