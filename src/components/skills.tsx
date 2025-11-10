@@ -1,71 +1,8 @@
 "use client";
 import React from "react";
-import {type Skill, skills} from "@/data/content";
 import styles from "./skills.module.css";
-
-const groupBy = (set: Iterable<any>, fn: (val: any) => string) => {
-  return Array.from(set).reduce((accum, val) => {
-    const key = fn(val);
-    if (accum[key]) {
-      return {...accum, [key]: [...accum[key], val]};
-    }
-    return {...accum, [key]: [val]};
-  }, {});
-};
-
-const sortedSkills = skills.sort((a, b) => a.level - b.level || a.name.localeCompare(b.name));
-const skillsByCategory = groupBy(sortedSkills, ({category}) => category);
-
-const categoryIcons: Record<string, string> = {
-  languages: "◈",
-  frameworks: "◆",
-  libraries: "▶",
-  databases: "●",
-  tools: "▲",
-  speech: "■"
-};
-
-const categoryTitles: Record<string, string> = {
-  languages: "LANGUAGES",
-  frameworks: "FRAMEWORKS",
-  libraries: "LIBRARIES",
-  databases: "DATABASES",
-  tools: "TOOLS",
-  speech: "COMMUNICATION"
-};
-
-const SkillItem = ({skill}: {skill: Skill}) => {
-  return (
-    <div className={styles.skillItem}>
-      <div className={styles.skillInfo}>
-        <div className={styles.skillLogo}>{skill.logo}</div>
-        <span className={styles.skillName}>{skill.name}</span>
-      </div>
-    </div>
-  );
-};
-
-const SkillCategory = ({category, skills}: {category: string, skills: Skill[]}) => {
-  return (
-    <div className={styles.categorySection}>
-      <div className={styles.categoryHeader}>
-        <div className={styles.serviceMarker}>
-          {categoryIcons[category]}
-        </div>
-        <h3 className={styles.categoryTitle}>
-          {categoryTitles[category]}
-        </h3>
-        <div className={styles.categoryLine}></div>
-      </div>
-
-      <div className={styles.skillsGrid}>
-        {skills.map((skill) => (
-          <SkillItem key={skill.id} skill={skill} />
-        ))}
-      </div>
-    </div>
-  );
-};
+import { workshopStations, getSkillsByStation } from "@/data/content";
+import WorkshopCard from "@/components/WorkshopCard";
 
 const Skills = () => {
   return (
@@ -73,7 +10,7 @@ const Skills = () => {
       {/* Workshop-style header */}
       <div className={styles.sectionHeader}>
         <div className={styles.cornerBracket}></div>
-        <h2 className={styles.title}>Workshop Arsenal</h2>
+        <h2 className={styles.title}>Workshop Toolkit</h2>
         <div className={styles.titleUnderline}>
           <div className={styles.line}></div>
           <div className={styles.diamond}></div>
@@ -84,24 +21,41 @@ const Skills = () => {
       {/* Philosophy text */}
       <div className={styles.philosophy}>
         <p>
-          <span className={styles.emphasis}>Backend-focused craftsperson</span> comfortable across the full stack.
-          Not afraid of new languages or frameworks—give me Rust and I&apos;ll take the challenge gladly.
-        </p>
-        <p>
-          Five years building everything from startup MVPs to enterprise systems. REST APIs, ORMs, raw SQL,
-          mentoring developers at all levels. The goal: meaningful projects that make people&apos;s lives better.
+          Backend-focused craftsperson comfortable across the full stack.
+          Building software since 2019, from startup MVPs to enterprise systems.
+          Give me a new language or framework—I&apos;ll figure it out.
         </p>
       </div>
 
-      {/* Skills arsenal */}
-      <div className={styles.skillsArsenal}>
-        {Object.entries(skillsByCategory).map(([category, categorySkills]) => (
-          <SkillCategory
-            key={category}
-            category={category}
-            skills={categorySkills as Skill[]}
-          />
-        ))}
+      {/* Workshop Stations */}
+      <div className={styles.stationsGrid}>
+        {workshopStations.map((station) => {
+          const stationSkills = getSkillsByStation(station.id);
+
+          return (
+            <WorkshopCard
+              key={station.id}
+              theme="light"
+              marker={station.marker}
+              className={styles.stationCard}
+              statusLight={false}
+            >
+              <h3 className={styles.stationName}>{station.name}</h3>
+              <p className={styles.stationDescription}>{station.description}</p>
+
+              <div className={styles.stationTools}>
+                {stationSkills.map((skill) => (
+                  <div key={skill.id} className={styles.toolItem}>
+                    <div className={styles.toolIcon} aria-hidden="true">
+                      {skill.logo}
+                    </div>
+                    <span className={styles.toolName}>{skill.name}</span>
+                  </div>
+                ))}
+              </div>
+            </WorkshopCard>
+          );
+        })}
       </div>
 
       {/* Background geometric elements */}
