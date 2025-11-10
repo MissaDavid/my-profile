@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./about.module.css"
+import WorkshopCard from "@/components/WorkshopCard";
 
 export default function About() {
   return (
@@ -7,7 +8,7 @@ export default function About() {
       {/* Workshop-style header with geometric accent */}
       <div className={styles.sectionHeader}>
         <div className={styles.cornerBracket}></div>
-        <h2 className={styles.title}>About Me</h2>
+        <h2 className={styles.title}>Building the Toolbox</h2>
         <div className={styles.titleUnderline}>
           <div className={styles.line}></div>
           <div className={styles.diamond}></div>
@@ -16,77 +17,64 @@ export default function About() {
       </div>
 
       <div className={styles.content}>
-        {/* Journey timeline with geometric markers */}
-        <div className={styles.journeySection}>
-          <div className={styles.journeyItem}>
-            <div className={styles.marker}>01</div>
-            <div className={styles.journeyContent}>
-              <h3 className={styles.journeyTitle}>FRANCE → SEOUL</h3>
-              <p>
-                Born and raised in France, my curiosity drove me beyond my homeland to the bustling streets of
-                Seoul, where I became a translator specializing in Korean literature, cinema and traditional music.
-              </p>
-            </div>
-          </div>
+        <div className={styles.craftPhases}>
+          {/* Phase 1: Translation Craft */}
+          <WorkshopCard
+            theme="light"
+            marker="01"
+            skillBadge="Attention to Detail"
+            className={styles.phaseCard}
+          >
+            <h3 className={styles.phaseTitle}>Language & Precision</h3>
+            <p className={styles.phaseContent}>
+              Started as a translator specializing in Korean language—literature,
+              cinema, traditional arts. Turns out translating a 400-page novel teaches
+              you a lot about precision: every word carries weight, context shapes
+              meaning, and quality lives in the details most people never see.
+            </p>
+          </WorkshopCard>
 
-          <div className={styles.journeyItem}>
-            <div className={styles.marker}>02</div>
-            <div className={styles.journeyContent}>
-              <h3 className={styles.journeyTitle}>THE PIVOT</h3>
-              <p>
-                After years of publications and movie festivals, I was ready to expand my skills.
-                The line between spoken languages and programming ones seemed thin! A 6-month intensive bootcamp
-                led me to Melbourne&apos;s caffeinated kingdom, where I landed my first full-stack developer role.
-              </p>
-            </div>
-          </div>
+          {/* Phase 2: Software Craft */}
+          <WorkshopCard
+            theme="light"
+            marker="02"
+            skillBadge="Problem Solving"
+            className={styles.phaseCard}
+          >
+            <h3 className={styles.phaseTitle}>Building Systems</h3>
+            <p className={styles.phaseContent}>
+              Intensive bootcamp in Paris revealed that spoken languages and programming
+              languages aren&apos;t so different—both need structure, syntax, and an
+              understanding of how pieces connect. First full-stack role in Melbourne&apos;s
+              caffeinated chaos: learning to build systems from start to finish, at
+              every layer.
+            </p>
+          </WorkshopCard>
 
-          <div className={styles.journeyItem}>
-            <div className={styles.marker}>03</div>
-            <div className={styles.journeyContent}>
-              <h3 className={styles.journeyTitle}>BACKEND FOCUS</h3>
-              <p>
-                I &ldquo;crossed the ditch&rdquo; to Wellington, Aotearoa New Zealand, working as a Python Backend Engineer.
-                Focusing on backend was deliberate—there&apos;s more rebellion in understanding what happens <span className={styles.emphasis}>underneath the hood</span>.
-              </p>
-            </div>
-          </div>
-
-          <div className={styles.journeyItem}>
-            <div className={styles.marker}>04</div>
-            <div className={styles.journeyContent}>
-              <h3 className={styles.journeyTitle}>HOME BASE</h3>
-              <p>
-                Finally settled in Ottawa, broadening horizons in cybersecurity.
-                Celebrated my Permanent Residency in 2023—Canada is now home.
-              </p>
-            </div>
-          </div>
+          {/* Phase 3: Systems Craft */}
+          <WorkshopCard
+            theme="light"
+            marker="03"
+            skillBadge="System Design"
+            className={styles.phaseCard}
+          >
+            <h3 className={styles.phaseTitle}>What Lies Beneath</h3>
+            <p className={styles.phaseContent}>
+              Deliberately dove into backend work—the foundation that makes everything
+              else possible. Python, .NET, databases, APIs. There&apos;s something satisfying
+              about building the engine room. Now as a consultant, I get the best of
+              both worlds: variety in projects, depth in systems.
+            </p>
+          </WorkshopCard>
         </div>
 
-        {/* Workshop philosophy section */}
-        <div className={styles.philosophy}>
-          <div className={styles.philosophyHeader}>
-            <div className={styles.serviceMarker}>◈</div>
-            <span className={styles.philosophyTitle}>WORKSHOP PHILOSOPHY</span>
-          </div>
-          <p className={styles.philosophyText}>
-            Building solutions with craftmanship focus. Every problem is a puzzle waiting to be solved,
-            every line of code serves a purpose. Function over flash, but with thoughtful rebellion.
+        <div className={styles.beyondCode}>
+          <h3 className={styles.beyondTitle}>Beyond the Keyboard</h3>
+          <p className={styles.beyondContent}>
+            Off-duty, you&apos;ll find me playing video games, crocheting, soldering retro
+            consoles, playing music, throwing pottery, or managing two very opinionated
+            cats.
           </p>
-        </div>
-
-        {/* Personal interests */}
-        <div className={styles.interests}>
-          <h3 className={styles.interestsTitle}>Beyond Code</h3>
-          <div className={styles.interestsTags}>
-            <span className={styles.tag}>Video Games</span>
-            <span className={styles.tag}>D&D</span>
-            <span className={styles.tag}>Crocheting</span>
-            <span className={styles.tag}>Violin</span>
-            <span className={styles.tag}>Unreal Engine</span>
-            <span className={styles.tag}>Cat Whisperer</span>
-          </div>
         </div>
       </div>
 
