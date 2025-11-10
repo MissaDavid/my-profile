@@ -16,8 +16,9 @@ import {
   TbHome,
   TbHomeHeart,
   TbBrandDocker,
-  TbCloud, 
-  TbBrandCSharp
+  TbCloud,
+  TbBrandCSharp,
+  TbBrandVue
 } from "react-icons/tb";
 import { BiLogoFlask, BiBoltCircle, BiLogoPostgresql } from "react-icons/bi";
 import { SiAmazondynamodb, SiDotnet } from "react-icons/si";
@@ -225,4 +226,102 @@ export const skills: Skill[] = [
     level: 3,
     logo: SiDotnet(),
   },
+  {
+    id: "azure",
+    category: "tools",
+    name: "Azure",
+    level: 2,
+    logo: TbCloud(),
+  },
+  {
+    id: "github-actions",
+    category: "tools",
+    name: "GitHub Actions",
+    level: 2,
+    logo: TbBrandGit(),
+  },
+  {
+    id: "vue",
+    category: "frameworks",
+    name: "Vue",
+    level: 2,
+    logo: TbBrandVue(),
+  },
 ];
+
+export type WorkshopStation = {
+  id: string;
+  name: string;
+  marker: string;
+  description: string;
+  skillIds: string[];
+};
+
+export const workshopStations: WorkshopStation[] = [
+  {
+    id: "backend",
+    name: "Backend Station",
+    marker: "◈",
+    description: "Primary workshop area",
+    skillIds: [
+      "python",     // Python
+      "django",     // Django
+      "fastapi",    // FastAPI
+      "flask",      // Flask
+      "drf",        // DRF
+      "c#",         // C#
+      "dotnet",     // .NET
+      "postgresql", // PostgreSQL
+    ],
+  },
+  {
+    id: "frontend",
+    name: "Frontend Station",
+    marker: "◆",
+    description: "Supporting capabilities",
+    skillIds: [
+      "typescript",  // TypeScript
+      "javascript",  // JavaScript
+      "react",       // React
+      "nextjs",      // Next.js
+      "vue",         // Vue
+      "html",        // HTML
+      "css",         // CSS
+    ],
+  },
+  {
+    id: "infrastructure",
+    name: "Infrastructure Station",
+    marker: "▶",
+    description: "DevOps & deployment",
+    skillIds: [
+      "docker",         // Docker
+      "aws",            // AWS
+      "gcp",            // GCP
+      "azure",          // Azure
+      "git",            // Git
+      "github-actions", // GitHub Actions
+    ],
+  },
+  {
+    id: "communication",
+    name: "Communication Station",
+    marker: "●",
+    description: "Unique differentiator",
+    skillIds: [
+      "english",  // English
+      "french",   // French
+      "korean",   // Korean
+    ],
+  },
+];
+
+// Helper function to get skills by station
+export function getSkillsByStation(stationId: string): Skill[] {
+  const station = workshopStations.find(s => s.id === stationId);
+  if (!station) return [];
+
+  return station.skillIds
+    .map(id => skills.find(skill => skill.id === id))
+    .filter((skill): skill is Skill => skill !== undefined);
+}
